@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import Formulario from './components/Formulario'
-import Cita from './components/Cita'
+import Formulario from './components/Formulario';
+import Cita from './components/Cita';
 
 function App() {
   
@@ -22,7 +22,7 @@ function App() {
     } else {
       localStorage.setItem('citas', JSON.stringify([]))
     }
-  }, [citas]);
+  }, [citas, citasIniciales]);
 
 
   // Función que tome las citas actuales y agregue la nueva
@@ -49,7 +49,7 @@ function App() {
       <h1>Administrador de pacientes.</h1>
       
       <div className="container">
-        <div clasasName="row">
+        <div className="row">
           <div className="one-half column">
             <Formulario
               crearCita={crearCita}
